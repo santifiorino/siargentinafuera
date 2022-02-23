@@ -61,7 +61,7 @@ class App extends React.Component {
         <Info
           texto={
             <p>
-              Tienda imaginaria en la que podés observar cuánto valdrian ciertos
+              Tienda imaginaria en la que podés observar cuánto valdrían ciertos
               productos si la inflación Argentina en los últimos 20 años fuera
               igual a la de otros países.
             </p>
