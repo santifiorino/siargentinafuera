@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+@layer components {
+  .header_title {
+    @apply text-white font-black text-3xl mb-4;
+  }
+  .header_col {
+    @apply pt-10 pb-10 text-center pl-2 pr-2;
+  }
+
+  .boton-precio {
+    @apply text-white font-bold text-sm pl-4 pr-4 pt-1 pb-1 mb-4 rounded-full;
+  }
+
+  .producto-card {
+    @apply border-8 rounded-3xl w-2/3 sm:w-3/4 md:w-4/5 lg:w-full mx-auto pl-1 pr-1;
+  }
+
+  .icono {
+    @apply text-4xl hover:text-azul-mas-claro mr-4 ml-4;
+  }
+}
