@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/siargentinafuera/static/css/main.c6647459.css",
-    "main.js": "/siargentinafuera/static/js/main.e43cccb1.js",
+    "main.js": "/siargentinafuera/static/js/main.57c3dcba.js",
     "static/js/787.83123940.chunk.js": "/siargentinafuera/static/js/787.83123940.chunk.js",
     "index.html": "/siargentinafuera/index.html",
     "main.c6647459.css.map": "/siargentinafuera/static/css/main.c6647459.css.map",
-    "main.e43cccb1.js.map": "/siargentinafuera/static/js/main.e43cccb1.js.map",
+    "main.57c3dcba.js.map": "/siargentinafuera/static/js/main.57c3dcba.js.map",
     "787.83123940.chunk.js.map": "/siargentinafuera/static/js/787.83123940.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c6647459.css",
-    "static/js/main.e43cccb1.js"
+    "static/js/main.57c3dcba.js"
   ]
 }
