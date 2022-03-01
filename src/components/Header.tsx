@@ -5,7 +5,7 @@ import {SelectorPais} from "./SelectorPais";
 
 interface Props {
   paisSeleccionado: Pais;
-  cambiarPais: (event: any) => void;
+  handleSelect: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 }
 
 export const Header: React.FC<Props> = (props) => {
@@ -13,7 +13,7 @@ export const Header: React.FC<Props> = (props) => {
     <div className="grid grid-cols-1 md:grid-cols-2">
       <div className="bg-azul-claro header_col pl-3 pr-3">
         <h1 className="header_title">SI ARGENTINA FUERA COMO...</h1>
-        <SelectorPais cambiarPais={props.cambiarPais} />
+        <SelectorPais cambiarPais={props.handleSelect} />
       </div>
 
       <div className="bg-azul-oscuro header_col pl-3 pr-3">

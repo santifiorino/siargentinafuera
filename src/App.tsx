@@ -25,32 +25,26 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    let productosActualizados = this.state.listaProductos;
-    for (let i of this.state.listaProductos) {
-      i.precio_imaginario = Number(
-        (i.precio_2002 * (1 + paises[0].inflacion / 100)).toFixed(2)
-      );
-    }
-    this.setState({
-      ...this.state,
-      listaProductos: productosActualizados,
-    });
+    this.cambiarPais(paises[0]);
   }
 
-  cambiarPais = (event: any) => {
-    let nuevoPais = paises.filter(
+  handleSelect = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const nuevoPais: Pais = paises.filter(
       (pais) => pais.nombre === event.target.value
     )[0];
+    this.cambiarPais(nuevoPais);
+  };
 
+  cambiarPais = (paisNuevo: Pais) => {
     let productosActualizados = this.state.listaProductos;
     for (let i of this.state.listaProductos) {
       i.precio_imaginario = Number(
-        (i.precio_2002 * (1 + nuevoPais.inflacion / 100)).toFixed(2)
+        (i.precio_2002 * (1 + paisNuevo.inflacion / 100)).toFixed(2)
       );
     }
 
     this.setState({
-      paisSeleccionado: nuevoPais,
+      paisSeleccionado: paisNuevo,
       listaProductos: productosActualizados,
     });
   };
@@ -69,7 +63,7 @@ class App extends React.Component {
         />
         <Header
           paisSeleccionado={this.state.paisSeleccionado}
-          cambiarPais={this.cambiarPais}
+          handleSelect={this.handleSelect}
         ></Header>
         <Productos listaProductos={this.state.listaProductos} />
         <Info texto={footerInfo} />
